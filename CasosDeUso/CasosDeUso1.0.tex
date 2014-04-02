@@ -1,0 +1,371 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage[spanish]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{graphicx}				% Use pdf, png, jpg, or epsÂ§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{float}
+
+% para la identacion en los subsubsection
+\usepackage{changepage,titlesec}
+\titleformat{\subsubsection}[block]{}{\thesubsubsection}{1em}{} 
+\titlespacing*{\subsubsection} {3em}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+% termina = para la identacion en los subsubsection
+
+\author{Durazo Verdugo Rocela, Martínez Córdova Jesús Antonio}
+
+\title{Universidad de Sonora\\ Departamento de Matemáticas\\Licenciatura en Ciencias de la Computación\\Análisis y Diseño Orientado a Objetos}
+%\author{The Author}
+%\date{}							% Activate to display a given date or no date
+% cliente: Fernando Valles Cervantes
+\begin{document}
+\maketitle
+% INTRODUCION ======================================================================
+\section{Casos de uso}
+
+Un caso de uso es un escenario que describe cómo el software va a ser usado en una determinada situación. (Roger - Pressman 6ta Edición)\\
+Un diagrama de casos de uso es una especie de diagrama de comportamiento.\\
+Los diagramas de casos de uso están formados por los siguientes elementos que se describe a continuación.
+  % ===== ACTOR ====== 
+ \subsection{Actor}
+ Es un rol que un usuario juega con respecto al sistema. En el diagrama se muestra en la Figura ~\ref{fig:1}.
+ 
+ \begin{figure}[H]
+  \centering
+    \includegraphics{./img/fig1}
+  \caption{Actor}
+  \label{fig:1}
+\end{figure}
+
+  % ===== CASOS DE USO ====== 
+
+\subsection{Casos de uso}
+Es una tarea específica que se realiza tras una orden de algún agente externo, sea desde una petición de un actor o bien desde la invocación desde otro caso de uso. En el diagrama se muestra como la Figura ~\ref{fig:2}.
+
+ \begin{figure}[H]
+  \centering
+    \includegraphics{./img/fig2}
+  \caption{Casos de uso}
+  \label{fig:2}
+\end{figure}
+	% ===== RELACION DE CASOS DE USO ====== 
+\subsection{Relaciones de Casos de Uso}
+Existen tres relaciones principales entre los casos de uso se representan a continuación.
+		% ===== ASOCIACION ====== 
+\subsubsection{\textbf{Asociación}}
+\begin{adjustwidth}{3em}{0pt}
+Es el tipo de relación más básica que indica la invocación desde un actor o caso de uso a otro caso de uso. Dicha relación se denota con una flecha simple. Como se muestra a continuación en la Figura ~\ref{fig:3}.
+ \begin{figure}[H]
+  \centering
+    \includegraphics{./img/fig3}
+  \caption{Asociación}
+  \label{fig:3}
+\end{figure}
+ \end{adjustwidth}
+ 
+ 		% ===== INCLUSIÓN ====== 
+\subsubsection{\textbf{Inclusión}}
+\begin{adjustwidth}{3em}{0pt}
+Es una forma de interacción o creación, un caso de uso dado puede incluir otro caso de uso. El primer caso de uso a menudo depende del resultado del caso de uso incluido, en el diagrama de casos de uso se representa como la Figura  ~\ref{fig:4}.
+ \begin{figure}[H]
+  \centering
+    \includegraphics{./img/fig4}
+  \caption{Inclusión}
+  \label{fig:4}
+\end{figure}
+ \end{adjustwidth}
+ 
+ 		% ===== EXTENSIÓN ====== 
+ \subsubsection{\textbf{Extensión}}
+\begin{adjustwidth}{3em}{0pt}
+Es otra forma de interacción, un caso de uso dado (la extensión) puede extender a otro. Esta relación indica que el comportamiento del caso de la extensión se utiliza en casos de uso, un caso de uso a otro caso siempre debe tener extensión o inclusión. El caso de uso extensión puede ser insertado en el caso de uso extendido bajo ciertas condiciones. La notación, es una flecha de punta abierta, desde el caso de uso extensión al caso de uso extendido, con la etiqueta «extend». Esto puede ser útil para lidiar con casos especiales, o para acomodar nuevos requisitos durante el mantenimiento del sistema y su extensión. Como se muestra en la Figura  ~\ref{fig:5}.
+ \begin{figure}[H]
+  \centering
+    \includegraphics{./img/fig5}
+  \caption{Extensión}
+  \label{fig:5}
+\end{figure}
+ \end{adjustwidth}
+ 
+	% ===== DIAGRAMA DE CASOS DE USO ====== 
+\subsection{Diagrama de casos de uso}
+A continuación se presenta un diagrama con los casos de uso del proyecto \emph{Videotrack web}, en la Figura~\ref{fig:6}.
+\\
+Los \textbf{actores} son visitante del sitio y administrador; Administrador cuenta con privilegios para publicar y administrar el contenido y el visitante del sitio solo se le permite visualizar el contenido y compartirlo.
+\\
+\\
+Los \textbf{Casos de uso} que son presentados en la Figura~\ref{fig:6} son:
+\\
+\\
+\textbf{Iniciar sesión:} Sección el que el administrador podrá ingresar al sistema para introducir contenido a publicar en el sitio.
+\\
+\textbf{Generar publicación:} Sección donde el administrador podrá introducir la información para crear una publicación para el sitio.
+\\
+\textbf{Publicaciones:} Aquí el administrador podrá revisar las publicaciones creadas y hacer que aparezcan en el sitio o no.
+\\
+\textbf{Visualizar contenido:} En esta sección el visitante del sitio y el administrador podrán visualizar el contenido publicado en el sitio web.
+\\
+\textbf{Editar publicación:} Sección donde el administrador podrá editar una publicación ya generada.
+\\
+\textbf{Eliminar publicación:} En esta sección el visitante del sitio y el administrador podrán visualizar el contenido publicado en el sitio.
+\\
+
+ \begin{figure}[H]
+  \centering
+    \includegraphics[scale=0.7]{./img/fig7}
+  \caption{Diagrama de casos de uso}
+  \label{fig:6}
+\end{figure}
+
+\subsubsection{\textbf{Actores}}
+\begin{adjustwidth}{3em}{0pt}
+\begin{enumerate}
+\item Visitante del sitio: Una persona que accede a la dirección web del sitio por medio de un navegador.
+\item Administrador: Persona la cual posee privilegios para acceder al portal iniciando sesión, este puede crear publicaciones y decidir cuando aparecen en el sitio.
+\end{enumerate}
+ \end{adjustwidth}
+ 
+ 
+\subsubsection{\textbf{Especificación de los casos de uso}}
+\begin{adjustwidth}{3em}{0pt}
+
+En el proyecto \emph{Videotrack web} se definieron los siguientes casos de uso.
+\\
+\textbf{Iniciar sesión}
+\\
+Descripción:\\
+Sección del portal en la cual el administrador por medio de un registro introducirá un nombre y una contraseña asignados, que le permitirá entrar a la sección generar publicación y a la sección publicaciones.
+\\
+\\
+Flujo de eventos:
+ \end{adjustwidth}
+\begin{adjustwidth}{6em}{0pt}
+Flujo básico: 
+\begin{enumerate}
+\item El sistema solicita nombre de usuario y contraseña(necesarios para iniciar sesión).
+\item El administrador llenará los campos correspondientes.
+\item El sistema verifica que los datos ingresados por el administrador sean correctos.
+\item El sistema muestra la página publicaciones.
+\end{enumerate}
+ \end{adjustwidth}
+
+\begin{adjustwidth}{6em}{0pt}
+Flujo alternativo:
+\begin{itemize}
+\item Si el administrador introdujo nombre de usuario y/o contraseña incorrectos, se mostrará un mensaje de error sin salir del formulario.
+\end{itemize}
+ \end{adjustwidth}
+
+\begin{adjustwidth}{6em}{0pt}
+Pre-condiciones:
+\begin{itemize}
+\item El administrador tiene nombre de usuario y contraseña para iniciar sesión.
+\end{itemize}
+ \end{adjustwidth}
+ 
+\begin{adjustwidth}{3em}{0pt}
+\textbf{Visualizar contenido}
+\\
+Descripción:\\
+En esta sección al visitante del sitio y al administrador se les permite visualizar el contenido publicado del sitio.
+En el siguiente flujo de eventos el visitante del sitio es la persona que interactúa en el pero también puede ser el Administrador.
+\\
+\\
+Flujo de eventos:
+ \end{adjustwidth}
+ \begin{adjustwidth}{6em}{0pt}
+Flujo básico:
+\begin{enumerate}
+\item El visitante del sitio ingresa la dirección del sitio en un navegador.
+\item Se abre el sitio en la página de inicio.
+\item El visitante navega en el portal por medio de pestañas que muestran el diverso contenido.
+\end{enumerate}
+ \end{adjustwidth}
+ 
+\begin{adjustwidth}{6em}{0pt}
+Flujo alternativo:
+\begin{itemize}
+\item Si el usuario introduce de manera incorrecta la dirección del sitio no podrá ingresar en este.
+\end{itemize}
+\end{adjustwidth}
+
+\begin{adjustwidth}{6em}{0pt}
+Pre-condiciones:
+\begin{itemize}
+\item Abrir un navegador con internet.
+\end{itemize}
+\end{adjustwidth}
+
+% === Generar publicación ===
+\begin{adjustwidth}{3em}{0pt}
+\textbf{Generar publicación}
+\\
+Descripción:\\
+En esta sección el administrador introduce la información necesaria para crear una publicación que será mostrada en el sitio.
+\\
+\\
+Flujo de eventos:
+ \end{adjustwidth}
+ \begin{adjustwidth}{6em}{0pt}
+Flujo básico:
+\begin{enumerate}
+\item El administrador introduce en un formulario datos como, título, categoría, nota, etc. Para crear la nota.
+\item El administrador pulsa el botón \emph{crear publicación}.
+\item El sistema guarda en la base de datos la publicación creada.
+\item El sistema muestra una visualización previa de la publicación generada.
+\end{enumerate}
+ \end{adjustwidth}
+ 
+\begin{adjustwidth}{6em}{0pt}
+Flujo alternativo:
+\begin{itemize}
+\item Si el administrador no introduce todos datos para la publicación se mostrará un mensaje de error y se seguirá mostrando el formulario.
+\end{itemize}
+\end{adjustwidth}
+
+\begin{adjustwidth}{6em}{0pt}
+Pre-condiciones:
+\begin{itemize}
+\item Iniciar sesión.
+\end{itemize}
+\end{adjustwidth}
+ 
+ % === Publicaciones ===
+\begin{adjustwidth}{3em}{0pt}
+\textbf{Publicaciones}
+\\
+Descripción:\\
+En esta sección el administrador puede ver las publicaciones generadas previamente y decidir si publicarlas o no para que sean visualizadas en el sitio.
+\\
+\\
+Flujo de eventos:
+ \end{adjustwidth}
+ \begin{adjustwidth}{6em}{0pt}
+Flujo básico:
+\begin{enumerate}
+\item El administrador entra a la sección \emph{publicaciones}.
+\item El sistema le mostrará una lista de las publicaciones generadas hasta al momento que no estén disponibles para visualizar en el sitio todavía.
+\item El administrador decide qué publicaciones deben aparecer ya en el sitio seleccionándolas.
+\item El administrador pulsa el botón de \emph{publicar en el sitio}.
+\item El sistema ya podrá mostrar en el sitio las publicaciones seleccionadas.
+\end{enumerate}
+ \end{adjustwidth}
+ 
+\begin{adjustwidth}{6em}{0pt}
+Flujo alternativo:
+\begin{itemize}
+\item Si no existen publicaciones pendientes, se mostrará al ingresar a esta sección solo un dialogo que lo diga.
+\end{itemize}
+\end{adjustwidth}
+
+\begin{adjustwidth}{6em}{0pt}
+Pre-condiciones:
+\begin{itemize}
+\item Iniciar sesión.
+\end{itemize}
+\end{adjustwidth}
+
+% ========== Editar publicaciones ==========
+\begin{adjustwidth}{3em}{0pt}
+\textbf{Editad publicaciones}
+\\
+Descripción:\\
+En esta sección el administrador podrá observar las publicaciones generadas previamente y seleccionarla que desea modificar de la base de datos.
+\\
+\\
+Flujo de eventos:
+ \end{adjustwidth}
+ \begin{adjustwidth}{6em}{0pt}
+Flujo básico:
+\begin{enumerate}
+\item El sistema muestra una lista de las publicaciones publicadas.
+\item El administrador selecciona la publicación deseada.
+\item El sistema muestra la publicación en un formulario para editar.
+\item El usuario edita la publicación y pulsa el botón \emph{Modificar noticia}.
+\item El sistema hace los cambios en la base de datos.
+\end{enumerate}
+ \end{adjustwidth}
+ 
+\begin{adjustwidth}{6em}{0pt}
+Flujo alternativo:
+\begin{itemize}
+\item Si no existen publicaciones se mostrará un mensaje correspondiente y regresará a la sección publicaciones.
+\end{itemize}
+\end{adjustwidth}
+
+\begin{adjustwidth}{6em}{0pt}
+Pre-condiciones:
+\begin{itemize}
+\item Iniciar sesión.
+\end{itemize}
+\end{adjustwidth}
+ 
+ % ========== Eliminar publicaciones ==========
+\begin{adjustwidth}{3em}{0pt}
+\textbf{Editad publicaciones}
+\\
+Descripción:\\
+En esta sección el administrador podrá observar las publicaciones generadas previamente y seleccionarla que se va a eliminar de la base de datos.
+\\
+\\
+Flujo de eventos:
+ \end{adjustwidth}
+ \begin{adjustwidth}{6em}{0pt}
+Flujo básico:
+\begin{enumerate}
+\item El sistema muestra una lista de las publicaciones.
+\item El administrador selecciona la publicación la publicación deseada.
+\item El sistema muestra la publicación.
+\item El usuario confirma la publicación a eliminar pulsando el botón \emph{Eliminar noticia}.
+\item El sistema borra los datos de la base de datos.
+\end{enumerate}
+ \end{adjustwidth}
+ 
+\begin{adjustwidth}{6em}{0pt}
+Flujo alternativo:
+\begin{itemize}
+\item Si no existieran publicaciones se mostrará un mensaje correspondiente y regresará a la sección publicaciones.
+\end{itemize}
+\end{adjustwidth}
+
+\begin{adjustwidth}{6em}{0pt}
+Pre-condiciones:
+\begin{itemize}
+\item Iniciar sesión.
+\end{itemize}
+\end{adjustwidth}
+ 
+% ===  REFERENCIAS ================================================================== 
+\section{Referencias}
+\begin{itemize}
+
+\item Ingeniería del Software Roger Pressman 6th Ed McGraw-Hill
+\item Jacobson, I., P. Jonsson, M. Christerson and G. Overgaard, Ingeniería de Software Orientada a Objetos - Un acercamiento a través de los casos de uso.
+\item Addison Wesley Longman, Upper Saddle River, N.J., 1992.
+
+\end{itemize} 
+
+
+\end{document}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
