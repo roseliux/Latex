@@ -1,0 +1,162 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage[spanish]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{graphicx}				% Use pdf, png, jpg, or epsÂ§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+\usepackage{hyperref}
+
+\author{Durazo Verdugo Rocela, Martínez Córdova Jesús Antonio}
+
+\title{Universidad de Sonora\\ Departamento de Matemáticas\\Licenciatura en Ciencias de la Computación\\Análisis y Diseño Orientado a Objetos}
+%\author{The Author}
+%\date{}							% Activate to display a given date or no date
+% cliente: Fernando Valles Cervantes
+\begin{document}
+\maketitle
+% INTRODUCION ======================================================================
+\section{Introducción}
+
+% ==== PROPOSITO ==== %
+\subsection{Proposito}
+Este documento se realiza con el propósito de plantear los requerimientos del proyecto \emph{VideoTrack web}, de hacer acuerdos con el cliente \emph{Fernando Valles Cervantes} y de entender el problema que el cliente plantea.
+Como base para realizar este documento se toma el estándar IEEE 830: especificación de requerimientos de software traducido del ingles (IEEE 830: software requirements specifications).
+  
+  % ==== ALCANCE ==== %
+\subsection{Alcance}
+Ayudar al productor a estar en contacto con sus televidentes, fanáticos y seguidores con las noticias mas actualizadas acerca del programa \emph{Videotrack}. Los usuarios podrán visualizar reportajes, artículos, videos y galería de fotos.
+Los usuarios podrán compartir el contenido en las redes sociales (Twitter y Facebook).
+El sistema solo tendrá un usuario administrador el cual actualizara la pagina,generando nuevas publicaciones, con imagines, videos y/o texto.
+
+% ====  DEFINICIONES ==== %
+\subsection{Definiciones}
+A continuación se definen los términos técnicos utilizados en el sistema:
+\begin{itemize}
+\item Web: Conjunto mundial de documentos electrónicos llamados páginas Web. La Web es uno de los servicios más populares de internet.
+
+\item Sitio web: En principio está compuesto por varias páginas web ordenadas de una manera determinada (es lo que observamos en el "mapa del sitio"). Pero puede contener otros archivos digitales como por ejemplo: videos, archivos .PDF, documentos de texto, archivos de audio, imágenes, presentaciones, etc.
+Un sitio web es desarrollado con un propósito determinado o en torno a un tema, a una disciplina de estudio o una manifestación artística. Este es el que desarrollaremos como sistema.
+
+\item Portal web: Puerta de la web que proporciona contenido actual y personalizado a los usuarios, y que puede ser personalizada aun más por los usuarios. También se le conoce como portal.
+
+\item Página web: Es un archivo generalmente redactada en lenguaje HTML (Hypertext Markup Language). Se requiere un navegador web para su lectura normal pero su versión codificada en HTML (el código fuente) puede ser leído por cualquier procesador de texto.
+
+\item Internet: Es un conjunto descentralizado de redes de comunicación interconectadas que utilizan la familia de protocolos TCP/IP, lo cual garantiza que las redes físicas heterogéneas que la componen funcionen como una red lógica única, de alcance mundial.
+
+\item Videotrack: Programa de televisión dedicado al entretenimiento, transmitido por Telemax en Hermosillo, Sonora, México, el programa es transmitido los viernes a las 7:00 pm con repeticiones los sábados a las 8:00 pm.
+
+\item Software: son los programas y otra información de funcionamiento utilizado por un ordenador.
+
+\end{itemize}
+
+% ==== REFERENCIAS ==== %
+\subsection{Referencias}
+\begin{itemize}
+\item Estándar IEEE 830: Software Requirements Specifications.
+\item \href{http://books.google.com.mx/books?id=DoF9lIJnKtwC&lpg=PA214&dq=portal%20web%20sitio%20web&pg=PA214#v=onepage&q=portal%20web%20sitio%20web&f=false}{Diccionario de Informatica E Internet: Computer and Internet Technology Definitions in Spanish}
+\item \href{http://tpinternet.wordpress.com/2010/09/23/definiciones-y-diferencias-pagina-web-portal-web-sitio-web/}{Tpinternet's Blog}
+\item \url{http://es.wikipedia.org/wiki/Portal_(Internet)}
+\item \url{http://infoius.blogspot.mx/2011/03/paginas-web-y-portales-cual-es-la.html}
+\end{itemize}
+% DESCRIPCION GENERAL ==============================================================
+\section{Descripción general}
+
+ % ==== PERSPECTIVA DEL PRODUCTO ==== %
+\subsection{Perspectiva del producto}
+
+El productor Fernando Valles Cervantes tiene un programa de televisión en Hermosillo, Sonora, México en la televisora de \emph{Telemax} donde se transmiten temas de interés para los jóvenes con el nombre de \emph{Videotrack}, el programa es transmitido los viernes a las 7:00 pm con repeticiones los sábados a las 8:00 pm, en el programa se manejan varias redes sociales como Youtube, Facebook y Twitter con el fin de estar en comunicación con los televidentes.
+El productor busca un sitio donde se pueda publicar fotografías, artículos, reportajes y videos, para así distribuir los enlaces por las redes sociales, y así el televidente tenga un sitio a donde acudir para estar informado de lo que ocurre en el programa.
+El sitio web estará dedicado únicamente al contenido generado en el programa a diferencia de Facebook, twitter y otras redes sociales donde se ven diferentes contenidos.
+\subsection{Funciones del producto}
+
+La función del sistema es crear un medio de comunicación entre el productor y sus televidentes, para tenerlos actualizados de la información presentada en el programa.
+Se podrá visualizar una pagina con diferentes publicaciones que pueden contener reportajes, anuncios, fotos y videos.
+
+   % ==== CARACTERISTICAS DE LOS USUARIOS ==== %
+\subsection{Características de los usuarios}
+
+El sitio web sera publico, por lo tanto cualquier usuario con conocimientos básicos de computación y que sepa como navegar por internet tendrá acceso al sitio web.
+
+ % ==== RESTRICCIONES ==== %
+\subsection{Restricciones}
+
+Para desarrollar este software se necesitan:
+\begin{itemize}
+\item 2 computadoras de escritorio o Laptop, requerimientos minimos de 4GB de memoria RAM, 100 GB de disco duro, procesador core 2 Dou, sistema operativo windows 7.
+\item Impresora para imprimir la documentación.
+\item Sala de juntas para reuniones con el cliente y para juntas de trabajo.
+\item Dominio .com
+\end{itemize}
+
+  % ==== SUPOSICIONES Y DEPENDENCIAS ==== %
+\subsection{Suposiciones y dependencias}
+A continuación se presentan suposiciones y dependencias por parte del cliente y los desarrolladores.
+\\
+\\
+Cliente:
+\begin{itemize}
+
+\item Contará con una computadora con conexión  a internet, para acceder al sitio web terminado y para subir contenido a el.
+\item Contratará el dominio de internet.
+\\ 
+\end{itemize}
+
+Desarrolladores:
+\begin{itemize}
+\item  Contarán con internet para poder desarrollar y hacer pruebas en el sistema.
+\item Disponen del espacio de trabajo, un espacio donde podrán desarrollar el sitio web.
+\item Contarán con equipos de trabajo para poder desarrollar el sitio web.
+\end{itemize}
+
+% ESPECIFICACIÓN DE REQUERIMIENTOS =================================================
+
+\section{Especificación de requerimientos}
+
+% ==== INTRODUCCION ==== %
+\subsection{Introducción}
+
+Los requerimientos ayudan a entender mejor el problema en cuya solución trabajarán. Incluye el conjunto de tareas que conducen a comprender cuál será el impacto del software sobre el negocio, qué es lo que el cliente quiere y cómo interactuarán los usuarios finales con el software. (Roger Pressman - 6ta Edición).
+\\
+Los requerimientos pueden ser Funcionales o No Funcionales.
+\\
+\emph{Requerimientos funcionales} son declaraciones de los servicios que debe proporcionar el sistema, de la manera en que éste debe reaccionar a entradas particulares y de cómo se debe comportar en situaciones particulares (© Copyright 2012 Scribd Inc.).
+\\
+Los \emph{Requerimientos no funcionales} son aquellos requerimientos que aparecen junto con las necesidades del usuario, definen las restricciones y las propiedades de un sistema (Roger Pressman - 6ta Edición).
+
+% ==== REQUERIMIENTOS FUNCIONALES ==== %
+\subsection{Requerimientos funcionales}
+En esta sección se presentan los requerimientos funcionales que son los que el sistema debe cumplir para lograr solucionar la problemática planteada.
+\begin{itemize}
+
+\item \textbf{RF1: } El sitio web será publico. Cualquier persona con un navegador e internet podrá visualizar su contenido.
+\item \textbf{RF2: } El sitio web debe permitir a los visitantes visualizar contenido (fotos, publicaciones, videos y reportajes de eventos)  publicados en la página por el administrador, que involucran al programa videotrack.
+\item \textbf{RF3: } El sitio web debe dar acceso a la publicación de contenido a un administrador por medio de log-in únicamente.
+\item \textbf{RF4: } El sitio web debe permitir al administrador publicar contenido en cualquier categoría.
+\item \textbf{RF5: } El sitio web debe tener una barra fija donde los visitantes podrán interactuar en las redes sociales del programa como Facebook, Twitter y Youtube.
+
+\end{itemize}
+
+% ==== REQUERIMIENTOS NO FUNCIONALES ==== %
+\subsection{Requerimientos no funcionales}
+Los requerimientos no funcionales son las restricciones a las cuales se encuentra condicionado el sitio web se refieren al rendimiento, la calidad; especifica algo sobre el propio sistema y cómo debe realizar sus funciones.
+\begin{itemize}
+
+\item \textbf{RNF1: } El sitio web debe dar respuesta en menos de 5 segundos al navegador.
+\item \textbf{RNF2: } El sitio web debe funcionar en los navegadores: Google Chrome, Mozilla Firefox e Internet Explorer.
+\item \textbf{RNF3: } El sitio web debe sostener conectado a 10,000 usuarios.
+\item \textbf{RNF4: } El sitio web debe tener varias paginas correspondientes a cada categoría a publicar.
+
+\end{itemize}
+
+% ==== REQUERIMIENTOS DESEABLES ==== %
+\subsection{Requerimientos deseables}
+En esta sección se introducen los requerimientos que son importantes pero, que debido al tiempo o a las condiciones del proyecto, no es posible implementarlas en esta versión del software.
+\begin{itemize}
+\item \textbf{RD1: }El sitio web debe contar con cuentas para los generadores de contenido y solo el usuario administrador podrá aprobar el contenido que quedará publicado definitivo en el sitio.
+\end{itemize}
+
+\end{document}  
